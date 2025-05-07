@@ -18,11 +18,6 @@ class MuridModel extends Model
 
     public function murid()
     {
-        return $this->hasMany(nilai_kelas_shifir_aModel::class,'murid_id');
-        return $this->hasMany(nilai_kelas_shifir_bModel::class,'murid_id');
-        return $this->hasMany(nilai_kelas_1Model::class,'murid_id');
-        return $this->hasMany(nilai_kelas_2Model::class,'murid_id');
-        return $this->hasMany(nilai_kelas_3Model::class,'murid_id');
-        return $this->hasMany(nilai_kelas_4Model::class,'murid_id');
+        
     }
 }
