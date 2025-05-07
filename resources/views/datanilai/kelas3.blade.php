@@ -1,0 +1,67 @@
+@extends('layout.template_admin')
+@section('content')
+<link rel="stylesheet" href="{{ asset('vendor/assets/css/style.css') }}">
+        <div class="table-container">
+            <div class="table-header">
+                <button class="add-btn">Tambah Data</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th rowspan="4">No</th>
+                        <th rowspan="4">No. Induk</th>
+                        <th rowspan="4">Nama Murid</th>
+                        <th rowspan="4">Kelas</th>
+                        <th colspan="3">Fan Pokok</th>
+                        <th colspan="5">Non Fan Pokok</th>
+                        <th colspan="4">praktek</th>
+                        <th rowspan="3">Jumlah Nilai Fan Pokok</th>
+                        <th rowspan="3">Rata2 Nilai Fan Pokok</th>
+                        <th rowspan="3">Jumlah Nilai Non Fan Pokok</th>
+                        <th rowspan="3">Rata2 Nilai Non Fan Pokok</th>
+                        <th rowspan="3">Jumlah Nilai Seluruh</th>
+                        <th rowspan="3">Rata2 Nilai Seluruh</th>
+                        <th rowspan="3">Rangking</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                    <tr>
+                        <th>Fiqih</th>
+                        <th>Tauhid</th>
+                        <th>Tajwid</th>
+                        <th>Shorrof</th>
+                        <th>I'lal</th>
+                        <th>Tarekh</th>
+                        <th>Akhlaq</th>
+                        <th>imla'</th>
+                        <th>Q. Qur'an</th>
+                        <th>Q. Kitab</th>
+                        <th>Muhafadhah</th>
+                        <th>P. Sholat</th>
+                    </tr>
+                    <tr>
+                        <th colspan="12">Nilai Imda</th>
+                        <th colspan="7">Nilai Imda Murni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="18" class="text-center">Belum ada data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection
