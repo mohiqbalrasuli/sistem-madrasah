@@ -32,16 +32,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/',function(){
-    return redirect('/login');
+    return redirect('welcome');
 });
 
 // login user
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login',[AuthController::class,'login_proses']);
-// ubah password
-Route::get('/ubah-password',[PasswordController::class,'edit']);
-Route::post('/ubah-password/update',[PasswordController::class,'update']);
-
 
 Route::get('/logout/{id}', [AuthController::class, 'logout']);
 
