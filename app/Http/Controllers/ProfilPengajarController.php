@@ -35,15 +35,15 @@ class ProfilPengajarController extends Controller
 
         $data=[
             'name' => $request->name,
-            'username'=>$request->username,
+            // 'username'=>$request->username,
             'email'=>$request->email,
-            'password'=>Hash::make($request->password),
+            // 'password'=>Hash::make($request->password),
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'gender' => $request->gender,
             'alamat' => $request->alamat,
             'no_telepon' => $request->no_telepon,
-            'role'=>$request->role,
+            // 'role'=>$request->role,
         ];
 
         $id_guru->update($data);

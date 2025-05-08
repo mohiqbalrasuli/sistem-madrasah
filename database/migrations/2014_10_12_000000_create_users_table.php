@@ -23,7 +23,7 @@ return new class extends Migration
             $table->enum('gender',['laki-laki','perempuan']);
             $table->string('alamat');
             $table->string('no_telepon');
-            $table->enum('role',['admin','guru']);
+            $table->enum('role',['admin','guru','wali_kelas']);
             $table->rememberToken();
             $table->timestamps();
         });

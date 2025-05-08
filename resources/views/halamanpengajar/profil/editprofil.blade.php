@@ -20,13 +20,13 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="username" value="{{ $guru->username }}" class="form-control @error('username') is-invalid @enderror" placeholder="Masukkan Username">
                             @error('username')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="email" value="{{ $guru->email }}" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan Email">
@@ -34,13 +34,13 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>Password</label>
                             <input type="password" name="password" value="{{ $guru->password }}" class="form-control @error('password') is-invalid @enderror" placeholder="Masukkan Password">
                             @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
@@ -86,7 +86,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>Role</label>
                             <select name="role" class="form-control @error('role') is-invalid @enderror">
                                 <option value="">-- Pilih Role --</option>
@@ -97,7 +97,7 @@
                             @error('role')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div>
+                        </div> --}}
 
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <a href="/profil/{id}" class="btn btn-secondary">Kembali</a>

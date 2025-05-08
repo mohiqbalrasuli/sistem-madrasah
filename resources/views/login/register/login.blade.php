@@ -32,6 +32,7 @@
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 width: 100%;
                 max-width: 400px;
+
             }
             .logo-container {
                 text-align: center;

@@ -52,6 +52,7 @@
                                 <option value="">-- Pilih Role --</option>
                                 <option value="admin">Admin</option>
                                 <option value="guru">Pengajar</option>
+                                <option value="wali_kelas">Wali Kelas</option>
                             </select>
                             @error('role')
                                 <div class="invalid-feedback">{{ $message }}</div>
