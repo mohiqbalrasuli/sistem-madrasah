@@ -83,6 +83,18 @@
                 background-color: #f8d7da;
                 border: 1px solid #f5c6cb;
             }
+        .forgot-password-link {
+            display: block;
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #014705;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .forgot-password-link:hover {
+            text-decoration: underline;
+            color: #094223;
+        }
         </style>
     </head>
     <body>
@@ -157,6 +169,12 @@
                 </div>
                 <button type="submit" class="login-btn">Login</button>
             </form>
+            <div class="form-group text-center mt-3">
+                <br>
+                <a href="/ubah-password" class="forgot-password-link">
+                    Lupa Password?
+                </a>
+            </div>
             <script>
                 const togglePassword = document.getElementById('togglePassword');
                 const password = document.getElementById('password');

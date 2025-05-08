@@ -20,13 +20,13 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label>Username</label>
                             <input type="text" name="username" value="{{ $guru->username }}" class="form-control @error('username') is-invalid @enderror" placeholder="Masukkan Username">
                             @error('username')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
-                        </div> --}}
+                        </div>
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" name="email" value="{{ $guru->email }}" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan Email">

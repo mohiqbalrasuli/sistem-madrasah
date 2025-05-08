@@ -1,4 +1,4 @@
-<div id="tab-akses" class="tab-content">
+
     <form id="form-akses">
         <div class="form-group">
             <label for="password_default">Reset Password Default (Guru & Murid)</label>
@@ -24,21 +24,25 @@
 
         <button type="submit">Simpan</button>
     </form>
-</div>
+
 
 <script>
-    document.getElementById('form-akses').addEventListener('submit', function(e) {
-        e.preventDefault();
+    // Pastikan DOM sudah dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('form-akses');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-        const data = {
-            password_default: document.getElementById('password_default').value,
-            login_akses: document.getElementById('login_akses').value,
-            akses_guru: document.getElementById('akses_guru').value
-        };
+                const data = {
+                    password_default: document.getElementById('password_default').value,
+                    login_akses: document.getElementById('login_akses').value,
+                    akses_guru: document.getElementById('akses_guru').value
+                };
 
-        // Simulasi penyimpanan (di console saja)
-        console.log('Data disimpan:', data);
-
-        alert("Pengaturan akun & akses berhasil disimpan!");
+                console.log('Data disimpan:', data);
+                alert("Pengaturan akun & akses berhasil disimpan!");
+            });
+        }
     });
 </script>

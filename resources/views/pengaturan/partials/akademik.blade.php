@@ -1,4 +1,3 @@
-<div id="tab-akademik" class="tab-content">
     <form id="form-akademik">
         <div class="form-group">
             <label for="tahun_ajaran">Tahun Ajaran Aktif</label>
@@ -20,15 +19,9 @@
                 <option value="umum">Pelajaran Umum (semua kelas sama)</option>
             </select>
         </div>
-
-        <div class="form-group">
-            <label for="kuota_kelas">Kuota Maksimal Murid per Kelas</label>
-            <input type="number" id="kuota_kelas" name="kuota_kelas" min="1" value="30">
-        </div>
-
+        
         <button type="submit">Simpan</button>
     </form>
-</div>
 
 <script>
     document.getElementById('form-akademik').addEventListener('submit', function(e) {

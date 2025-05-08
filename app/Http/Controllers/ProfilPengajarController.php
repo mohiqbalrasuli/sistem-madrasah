@@ -35,7 +35,7 @@ class ProfilPengajarController extends Controller
 
         $data=[
             'name' => $request->name,
-            // 'username'=>$request->username,
+            'username'=>$request->username,
             'email'=>$request->email,
             // 'password'=>Hash::make($request->password),
             'tempat_lahir' => $request->tempat_lahir,
