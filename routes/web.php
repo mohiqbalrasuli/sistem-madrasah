@@ -16,7 +16,6 @@ use App\Http\Controllers\Nilai3Controller;
 use App\Http\Controllers\Nilai4Controller;
 use App\Http\Controllers\NilaishifirAController;
 use App\Http\Controllers\NilaishifirBController;
-use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PengaturanController;
 use App\Http\Controllers\ProfilPengajarController;
 use Illuminate\Support\Facades\Route;
@@ -32,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/',function(){
-    return redirect('welcome');
+    return redirect('/login');
 });
 
 // login user
