@@ -18,6 +18,7 @@ use App\Http\Controllers\NilaishifirAController;
 use App\Http\Controllers\NilaishifirBController;
 use App\Http\Controllers\PengaturanController;
 use App\Http\Controllers\ProfilPengajarController;
+use App\Http\Controllers\walikelasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +41,7 @@ Route::post('/login',[AuthController::class,'login_proses']);
 
 Route::get('/logout/{id}', [AuthController::class, 'logout']);
 
+Route::get('/wali-kelas',[walikelasController::class,'index']);
 
 // middleware untuk pengajar
 Route::middleware(['auth','role:guru'])->group(function(){
@@ -111,4 +113,12 @@ Route::middleware(['auth','role:admin'])->group(function(){
     // pengaturan
     Route::get('/setting',[PengaturanController::class,'index']);
 
+    // halaman pengajar
+    Route::get('/pengajar/{id}',[Controller::class,'index']);
+    // profile pengajar
+    Route::get('/profil/{id}',[ProfilPengajarController::class,'index']);
+    Route::get('/profil/edit/{id}',[ProfilPengajarController::class,'edit']);
+    Route::post('/profil/update/{id}',[ProfilPengajarController::class,'update']);
+    // jadwal mengajar
+    Route::get('/jadwal-mengajar/{id}',[jadwalmengajarController::class,'index']);
 });

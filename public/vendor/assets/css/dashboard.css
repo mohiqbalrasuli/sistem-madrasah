@@ -12,6 +12,7 @@
     transition: transform 0.3s ease;
 }
 .dashboard-cards .card:hover {
+    background: linear-gradient(to right, #006407, #008309);
     transform: translateY(-5px);
 }
 .card-title {

@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: arial, sans-serif;
+    background-color: #ffff;
+    transition: all 0.3s ease;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    padding-top: 50px;
+    left: -200px;
+    top: 0;
+    height: 100vh;
+    width: 70px;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1002;
+}
+
+.sidebar.active {
+    width: 70px;
+    left: 0;
+}
+
+nav {
+    padding: 20px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+nav a i {
+    font-size: 20px;
+    color: #014705;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, #014705, #006407, #029b0c);
+}
+
+nav a:hover i {
+    color: #fff;
+}
+
+/* Burger Menu */
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    background: linear-gradient(to right, #014705, #006407, #029b0c);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.burger-menu i {
+    color: white;
+    font-size: 24px;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    margin-left: 0;
+    padding: 20px;
+    padding-top: 90px;
+    transition: all 0.3s ease;
+}
+
+.content.active {
+    margin-left: 70px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 70px;
+    height: 70px;
+    background: #fff;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.content.active .header {
+    left: 250px;
+}
+
+.theme-admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.admin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.copyright p {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+body.dark-theme .sidebar,
+body.dark-theme .header {
+    background: #1a1a1a;
+}
+
+body.dark-theme .theme-switch {
+    color: #fff;
+}
+
+body.dark-theme nav a i {
+    color: #fff;
+}
+
+body.dark-theme .welcome-section h1 {
+    color: #fff;
+}
+
+body.dark-theme .card {
+    background: #2d2d2d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar.active {
+        width: 60px;
+    }
+
+    .burger-menu {
+        top: 15px;
+        left: 15px;
+        padding: 10px;
+    }
+
+    .burger-menu i {
+        font-size: 20px;
+    }
+
+    .header {
+        left: 60px;
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .content.active .header {
+        left: 60px;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-cards {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .admin img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .theme-switch {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .sidebar.active {
+        width: 50px;
+    }
+
+    .header {
+        left: 50px;
+    }
+
+    .content.active .header {
+        left: 50px;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+}
